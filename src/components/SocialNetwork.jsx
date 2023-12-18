@@ -14,10 +14,10 @@ const SocialNetwork = () => {
           </div>
           <div className='text-lg flex flex-row items-center justify-center'>
             <img src={cursor} alt='cursor' className='w-12 h-12 hover:scale-110 transition-all duration-200 hover:cursor-pointer'/>
-            <span className='underline underline-offset-[1rem] pb-3'>Scroll Down To Discover</span>
+            <span className='pb-3'>Scroll Down To Discover</span>
 
           </div>
-          <div className=' text-lg rotate-90'>
+          <div className=' text-lg rotate-90 md:pr-3'>
             <span className='text-gray-500 text-xl font-semibold'>mahomedcissokho@esp.sn</span>
           </div>
       </div>

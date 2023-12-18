@@ -3,6 +3,7 @@ import AboutMe from "./components/AboutMe.jsx";
 import SocialNetwork from "./components/SocialNetwork.jsx";
 import DevDesign from "./components/DevDesign.jsx";
 import Projects from "./components/Projects.jsx";
+import Skills from "./components/Skills.jsx";
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
               <SocialNetwork/>
               <DevDesign/>
               <Projects/>
+              <Skills/>
 
           </div>
       </div>
