@@ -4,6 +4,7 @@ import SocialNetwork from "./components/SocialNetwork.jsx";
 import DevDesign from "./components/DevDesign.jsx";
 import Projects from "./components/Projects.jsx";
 import Skills from "./components/Skills.jsx";
+import Contact from "./components/Contact.jsx";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
               <DevDesign/>
               <Projects/>
               <Skills/>
+              <Contact/>
 
           </div>
       </div>
