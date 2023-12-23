@@ -1,4 +1,5 @@
 import profile from '../assets/image.jpeg'
+import {Link} from "react-router-dom";
 
 const AboutMe = () => {
   return(
@@ -11,13 +12,13 @@ const AboutMe = () => {
                 I’m  a passionate UX/UI designer and Software Engineer based in SENEGAL .
             </span>
             <div className="flex w-full ml-10 ">
-                <button className="text-white bg-green-500 w-32 hover:bg-green-500/90 transition-all duration-200 text-center rounded px-3 py-4 font-bold text-xl ">
+                <Link className="text-white bg-green-500 w-32 hover:bg-green-500/90 transition-all duration-200 text-center rounded px-3 py-4 font-bold text-xl "
+                to='mailto:mahomedcissokho@esp.sn'>
                     Hire Me
-                </button>
+                </Link>
             </div>
-
           </div>
-          <div className='w-96 h-96 bg-teal-50 rounded-full shadow-2xl'>
+          <div className='w-96 h-96 bg-teal-50 rounded-full shadow-2xl dark:bg-slate-900'>
               <div className='rounded-full w-[23rem] h-[23rem] p-3 overflow-y-hidden'>
                   <img src={profile} alt='profile' className='bg-cover bg-center bg-no-repeat' />
               </div>
