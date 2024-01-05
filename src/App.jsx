@@ -1,4 +1,4 @@
-import { useState} from "react";
+import {useEffect, useState} from "react";
 import {HashLink as Link} from "react-router-hash-link";
 import Skills from "./components/Skills.jsx";
 import AboutMe from "./components/AboutMe.jsx";
@@ -7,51 +7,66 @@ import DevDesign from "./components/DevDesign.jsx";
 import Projects from "./components/Projects.jsx";
 import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
+import Loader from "./components/Loader.jsx";
 
 function App() {
 
-    const [darkMode, setDarkMode] = useState(true)
+    const [darkMode, setDarkMode] = useState(false)
+    const [loading, setLoading] = useState(true)
 
     const toggleDarkMode = () => {
       setDarkMode(!darkMode)
     }
-    return (
+    
+    useEffect(() => {
+        const triggerAnimation = () => {
+           setLoading(false)
+        }
+        setTimeout(triggerAnimation, 2000)
 
+    }, []);
+
+
+    return loading ? <Loader/>  : (
       <div className={`${darkMode && "dark"}`}>
           <div className='w-screen h-screen dark:bg-slate-900 '>
-              <div className='max-w-6xl mx-auto flex justify-between px-3 py-6 items-center'>
-                  <div className='flex space-x-10 text-xl text-[#ccc] font-semibold'>
-                      <Link to='#about-me' className='font-bold text-green-400 ransition-all duration-300 hover:text-green-400'>About Me</Link>
-                      <Link to='#projects' className =' transition-all duration-300 hover:text-green-400'>Projects</Link>
-                      <Link to='#skills' className ='hover:text-green-400 transition-all duration-300'>Skills</Link>
-                  </div>
-                  <button className='shadow-xl bg-neutral-900 transition-all duration-200 hover:bg-neutral-800 hover:scale-110 flex self-center rounded-full cursor-pointer
-                   ' onClick={toggleDarkMode}>
-                      <span className='text-xl text-white font-bold text-center p-1 dark:text-neutral-800 dark:bg-white rounded-full'>MC</span>
-                  </button>
-                  <div className='text-lg flex rounded hover: self-center justify-self-center bg-green-500 hover:bg-green-500/90 transition-all duration-300 text-white font-bold '>
-                      <button className='px-4 py-3 font-bold'>Get In Touch</button>
+              <div className='sticky shadow-sm'>
+                  <div className='flex items-center justify-between max-w-6xl px-3 py-6 mx-auto'>
+                      <div className='flex  space-x-6 md:space-x-10 sm:text-xl text-lg text-[#ccc] font-semibold'>
+                          <Link to='#about-me' className='font-bold text-green-400 transition-all duration-300 hover:text-green-400'>About Me</Link>
+                          <Link to='#projects' className ='transition-all duration-300  hover:text-green-400'>Projects</Link>
+                          <Link to='#skills' className ='transition-all duration-300 hover:text-green-400'>Skills</Link>
+                      </div>
+                      <button className='flex self-center transition-all duration-200 rounded-full shadow-xl cursor-pointer bg-neutral-900 hover:bg-neutral-800 hover:scale-110 ' onClick={toggleDarkMode}>
+                          <span className='p-1 text-lg font-bold text-center text-white rounded-full md:text-xl dark:text-neutral-800 dark:bg-white ' title='Switch Mode'>MC</span>
+                      </button>
+                      <div className='flex self-center text-sm font-bold text-white transition-all duration-300 bg-green-500 rounded sm:text-lg justify-self-center hover:bg-green-500/90 '>
+                          <a className='px-4 py-3 font-bold' href="./assets/mc_cv.pdf" download="CV.pdf">
+                              Get In Touch
+                          </a>
+                      </div>
                   </div>
               </div>
 
-              <div className='mt-10 mb-16 max-w-5xl mx-auto flex justify-between items-center ' id='about-me'>
+
+              <div className='flex items-center justify-between max-w-5xl mx-auto mt-10 mb-16 ' id='about-me'>
                   <AboutMe/>
               </div>
 
-              <div className='dark:bg-slate-900 -mt-10'>
+              <div className='-mt-10 dark:bg-slate-900'>
                   <SocialNetwork/>
               </div>
-              <div className='dark:bg-slate-900 pt-20'>
+              <div className='pt-20 dark:bg-slate-900'>
                 <DevDesign/>
               </div>
-              <div className='dark:bg-slate-900 w-screen pt-24' id='projects'>
+              <div className='w-screen pt-24 dark:bg-slate-900' id='projects'>
                 <Projects/>
               </div>
-              <div className='dark:bg-slate-900 w-screen pt-24' id='skills'>
+              <div className='w-screen pt-24 dark:bg-slate-900' id='skills'>
                   <Skills/>
               </div>
 
-              <div className='dark:bg-slate-900 w-screen pb-20' id='contact'>
+              <div className='w-screen pb-20 dark:bg-slate-900' id='contact'>
                   <Contact/>
               </div>
               <div className=' dark:bg-slate-900 bg-[#263238] '>
@@ -61,8 +76,8 @@ function App() {
           </div>
 
       </div>
-
-  )
+        )
+  
 }
 
 export default App
