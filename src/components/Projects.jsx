@@ -14,7 +14,7 @@ const Projects = () => {
           </div>
           <div className=' mt-7 flex md:flex-row flex-col items-center justify-between gap-5  '>
               <div className='flex flex-col relative gap-5 '>
-                  <img src={catalyst} alt='catalyst' className='cursor-crosshair'/>
+                  <img src={catalyst} alt='catalyst' className='cursor-pointer'/>
                   <div className='bg-neutral-900 absolute rounded'>
                       <span className='text-white px-3 py-4 text-center md:text-3xl text-2xl font-extrabold'>01</span>
                   </div>
@@ -22,7 +22,7 @@ const Projects = () => {
               </div>
 
               <div className='flex flex-col relative gap-5 mt-16 '>
-                  <img src={space221} alt='space' className='cursor-crosshair'/>
+                  <img src={space221} alt='space' className='cursor-pointer'/>
                   <div className='bg-neutral-900 absolute rounded'>
                       <span className='text-white px-3 py-4 text-center md:text-3xl text-2xl font-extrabold'>02</span>
                   </div>
@@ -30,7 +30,7 @@ const Projects = () => {
               </div>
 
               <div className='flex flex-col relative gap-5 mt-32 '>
-                  <img src={dieulsima} alt='dieulsima' className='cursor-crosshair'/>
+                  <img src={dieulsima} alt='dieulsima' className='cursor-pointer'/>
                   <div className='bg-neutral-900 absolute rounded'>
                       <span className='text-white px-3 py-4 text-center md:text-3xl text-2xl  font-extrabold'>03</span>
                   </div>

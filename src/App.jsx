@@ -22,7 +22,7 @@ function App() {
         const triggerAnimation = () => {
            setLoading(false)
         }
-        setTimeout(triggerAnimation, 2000)
+        setTimeout(triggerAnimation, 3000)
 
     }, []);
 

@@ -36,7 +36,7 @@ const Footer = () => {
                       <path d="M13.5 9.17a3 3 0 1 0 0 5.659"></path>
                   </g>
               </svg>
-              <span className=' text-gray-500 font-extrabold text-lg'>copyright { new Date().getFullYear()}. All Right Reserved</span>
+              <span className=' text-gray-500 font-extrabold text-lg'>copyright { new Date().getFullYear()}. All Rights Reserved</span>
           </div>
       </div>
   )

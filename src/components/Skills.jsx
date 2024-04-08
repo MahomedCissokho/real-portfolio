@@ -39,10 +39,10 @@ const Skills = () => {
                               strokeLinecap: "butt"
                           })}>
                           <div className='font-semibold md:text-xl pb-2 text-[#208FB2] '>
-                              NodeJs
+                              Tailwind
                           </div>
                           <div className='font-semibold dark:text-white'>
-                              50%
+                              80%
                           </div>
                       </CircularProgressbarWithChildren>
                       <CircularProgressbarWithChildren
@@ -53,10 +53,10 @@ const Skills = () => {
                               strokeLinecap: "butt"
                           })}>
                           <div className='font-semibold md:text-xl pb-2 text-[#208FB2] '>
-                              Express
+                              JavaScript
                           </div>
                           <div className='font-semibold dark:text-white '>
-                              55%
+                              60%
                           </div>
                       </CircularProgressbarWithChildren>
                       <CircularProgressbarWithChildren
@@ -67,10 +67,10 @@ const Skills = () => {
                               strokeLinecap: "butt"
                           })}>
                           <div className='font-semibold md:text-xl pb-2 text-[#208FB2] '>
-                              MongoDB
+                              NodeJs
                           </div>
                           <div className='font-semibold dark:text-white'>
-                              60%
+                              55%
                           </div>
                       </CircularProgressbarWithChildren>
                   </div>
@@ -79,14 +79,14 @@ const Skills = () => {
                   <span className="w-0.5 rotate-90 h-20 -mb-8 bg-gray-700"></span>
                   <h2 className='text-xl font-bold dark:text-white'>- Mixed Skills</h2>
                   <div className='mt-10 flex flex-col gap-5'>
-                      <SkillBar name="JavaScript" level={65} color="#56DC95" />
                       <SkillBar name="PHP" level={55} color="#56DC95" />
-                      <SkillBar name="SpringBoot" level={40} color="#56DC95" />
                       <SkillBar name="Mysql" level={55} color="#56DC95" />
+                      <SkillBar name="Java SE" level={70} color="#56DC95" />
                       <SkillBar name="MongoDB" level={50} color="#56DC95" />
                       <SkillBar name="Supabase" level={60} color="#56DC95" />
                       <SkillBar name="Firebase" level={50} color="#56DC95" />
                       <SkillBar name="Figma" level={60} color="#56DC95" />
+                      <SkillBar name="UML" level={60} color="#56DC95" />
                   </div>
               </div>
           </div>
