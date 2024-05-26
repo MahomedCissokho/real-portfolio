@@ -11,7 +11,7 @@ import Header from "./components/Header.jsx";
 
 function App() {
 
-    const [darkMode, setDarkMode] = useState(false)
+    const [darkMode, setDarkMode] = useState(true)
     const [loading, setLoading] = useState(true)
 
     const toggleDarkMode = () => {
