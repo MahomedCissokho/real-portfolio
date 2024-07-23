@@ -60,7 +60,7 @@ const Header = ({ darkMode, toggleDarkMode }) => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <a className="px-4 py-3 font-bold max-sm:text-lg" href={resume} target="_blank">
+                    <a className="px-4 py-3 font-bold max-sm:text-lg" href={resume} target="_blank" rel="noreferrer">
                         Get In Touch
                     </a>
                 </motion.div>
