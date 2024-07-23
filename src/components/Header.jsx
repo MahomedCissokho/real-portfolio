@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 import { HashLink as Link } from "react-router-hash-link";
 import { useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { motion } from "framer-motion";
-import resume from "../assets/Software_Engineer_Student_MahomedCISSOKHO_ResumeInEnglish.pdf"
+import resume from "../assets/Software_Engineer_Student_MahomedCISSOKHO_ResumeInEnglish.pdf";
 
 const Header = ({ darkMode, toggleDarkMode }) => {
     const location = useLocation();
@@ -14,12 +14,6 @@ const Header = ({ darkMode, toggleDarkMode }) => {
     const isCurrent = (path) => {
         return hash.includes(path);
     };
-
-    useEffect(() => {
-        if (!hash) {
-            window.location.hash = "#about-me";
-        }
-    }, [hash]);
 
     return (
         <div className={`w-screen border shadow-sm bg-gray-400/5 ${darkMode && "dark border-gray-800"}`}>
@@ -49,16 +43,22 @@ const Header = ({ darkMode, toggleDarkMode }) => {
                         Skills
                     </Link>
                 </motion.div>
-                <div className="flex self-center transition-all duration-200 rounded-full shadow-xl cursor-pointer bg-neutral-900 hover:bg-neutral-800 hover:scale-110">
+                <motion.div
+                    className="flex self-center transition-all duration-200 rounded-full shadow-xl cursor-pointer bg-neutral-900 hover:bg-neutral-800 hover:scale-110"
+                    animate={{ scale: [1, 1.3, 1] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                >
                     <span className="p-1 text-xl font-bold text-center text-white rounded-full dark:text-neutral-800 dark:bg-white" onClick={toggleDarkMode}>
                         MC
                     </span>
-                </div>
+                </motion.div>
                 <motion.div
                     className="self-center hidden text-lg font-bold text-white transition-all duration-300 bg-green-500 rounded sm:flex justify-self-center hover:bg-green-500/90"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
                 >
                     <a className="px-4 py-3 font-bold max-sm:text-lg" href={resume} target="_blank" rel="noreferrer">
                         Get In Touch
